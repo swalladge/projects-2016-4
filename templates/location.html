@@ -68,7 +68,8 @@
         <h3>Comments</h3>
         {% for comment in comments %}
             <section class="comment">
-                <h4>{{ comment.get_author_comment(comment.author) }}</h4>
+                {% exec author = comment.get_author_comment(comment.author) %}
+                <h4><a href="/account/profile/{{ author }}">{{ author }}</a></h4>
                 <p>{{ comment.comment }}</p>
             </section>
         {% end for %}
