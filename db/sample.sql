@@ -1,52 +1,73 @@
--- Sample users
-INSERT INTO users(username, password, dp, email, fname, lname)
-  VALUES('drjc', 'whereisthegreensheep', NULL, 'james.r.curran@sydney.edu.au', 'James', 'Curran');
-
-INSERT INTO users(username, password, dp, email, fname, lname)
-  VALUES('impendingnicky', 'kneecaps@reforde_stroy', NULL, 'summerschool@ncss.edu.au', 'Nicky', 'Kneecapper');
-
-INSERT INTO users(username, password, dp, email, fname, lname)
-  VALUES('tomtom', 'james', NULL, 'thomas.m.curran@sscn.edu.au', 'Thomas', 'Curran');
-
-INSERT INTO users(username, password, dp, email, fname, lname)
-  VALUES('test', 'tset', NULL, 'test@test.test', 'Mr', 'Test');
-
--- Sample locations
-INSERT INTO locations(name, description, picture, uploader, address, latitude, longitude)
-  VALUES('SIT', 'School of Information Technologies', 'sit.jpg', 1, 'USyd', -33.89, 151.2);
-
-INSERT INTO locations(name, description, picture, uploader, address, latitude, longitude)
-  VALUES('UNSW', 'Trash', 'unsw.jpg', 1, 'nowhere', -33.91, 151.2);
-
-INSERT INTO locations(name, description, picture, uploader, address, latitude, longitude)
-  VALUES('The Womens College', 'Cool place', 'womens_college.jpg', 2, 'USyd', -33.89, 151.2);
-
-INSERT INTO locations(name, description, picture, uploader, address, latitude, longitude)
-  VALUES('The mens College', 'Cool place', 'womens_college.jpg', 5, 'USyd', -33.89, 151.2);
-
--- Sample tags
-INSERT INTO tags(name, place)
-  VALUES('univeristy', 1);
-
-INSERT INTO tags(name, place)
-  VALUES('univeristy', 2);
-
-INSERT INTO tags(name, place)
-  VALUES('trash', 2);
-
-INSERT INTO tags(name, place)
-  VALUES('sleep', 3);
-
--- Sample ratings
-INSERT INTO ratings(place, score, user)
-  VALUES(1, 5, 1);
-
-INSERT INTO ratings(place, score, user)
-  VALUES(2, 1, 1);
-
--- Sample comments
-INSERT INTO comments(author, comment, place)
-  VALUES(1, 'Its like there are only two people here', 2);
-
-INSERT INTO comments(author, comment, place)
-  VALUES(4, 'Where is the green sheep?', 1);
+INSERT INTO "locations" VALUES(1,'Genius Bar','Genius bar, guaranteeing extensive Thomas Testing of all problems.','a9aa77fac2e1dc65d5d4a5c6fddc304d7b0a16a4',1,'1 Infinite Loop, Cupertino, California',37.331405,-122.0304185);
+INSERT INTO "locations" VALUES(2,'Freelancer HQ','Let our next generation of cyber Currans assist you in achieving your goal as a freelance programmer.','20b4f0675cccd6d56b55e49216eda77cf7f89298',1,'680 George Street Sydney, New South Wales',-33.877419,151.2060635);
+INSERT INTO "locations" VALUES(3,'Tim''s Newsagency','Get all of your daily news at Tim''s Newsagency, the only location with our number of newspapers measured in kilotims.','576be1774427d55068a9340dd594b78a652379f3',1,'141 Redfern st',40.209127,-74.734221);
+INSERT INTO "locations" VALUES(4,'Department of Foreign Affairs and Approval','For all your approval needs, Blake''s your man. Whether it''s about a new website font, new meme or declaring war on Russia, Blake will approve all requests.','bc92401ea6b28a50dd8fed75f0e57013e2acc6df',1,'1600 Pennsylvania Ave NW, Washington, DC 20500, United States',38.8976989,-77.036553192281);
+INSERT INTO "locations" VALUES(5,'Octotim''s 31337 hacker agency','Need a quick program written or a secure database broken into? With four times the hands, Octotim can easily outpace any competition.','f44f094053c66bd29b7e69478fe4fa286fc8ac60',1,'Kingston, ACT, 2604',-35.3115576,149.1460903);
+INSERT INTO "locations" VALUES(6,'Callan''s carwash','Callan cleans car''s faster than any other, while turning many heads at the same time.','fd0653991babdaa2c5f75cd094b7820017368cd7',1,'375 Cleveland St, Redfern, NSW',-33.8925711,151.2161799);
+INSERT INTO "locations" VALUES(7,'The Backstreet Dancers','After many years of hiatus, Backstreet''s Back! Watch as they tour the world, stunning everyone with their swag dance moves.','781feb6afbf60c419a632d87ec6fb933a84fdcb5',1,'15 Hickson Rd, Walsh Bay',-33.8551809,151.2052887);
+INSERT INTO "locations" VALUES(8,'Lindt Cafe','Indulge in great chocolate delights, with more than adequate amount to keep you satisfied.','47114043358b24760642c30530a8c215110b2419',1,'Cockle Bay Wharf',-33.8718084,151.2023837);
+INSERT INTO "locations" VALUES(9,'Alex''s recording studio','Tired of working in a group, Alex split off from the backstreet dancers, running his own recording studio.','de4339dbecb20b7c22dc73eec03877c8b6f7a71f',1,'18 Mitchell Rd, Alexandria NSW 2015',-33.8989661,151.1948983);
+INSERT INTO "locations" VALUES(10,'Department of Internal Affairs and Disapproval','Created in response to the Department of Foreign Affairs and Approval, James Curran was chosen to lead humanity''s least impressed individuals in order to save the fragile upvote economy.','0ffc25d2eb1974a8ace5727a5c618915edd1bd23',1,'Kremlin',55.7514952,37.6181737535743);
+INSERT INTO "locations" VALUES(11,'Ardy''s Robot Dragracing','From a young age, little Ardy Weeno had an interest in making robots go fast. He is now the 3 time world champion robot drag racer. Come in and try to best him, if you dare.','7a16faa8bbcb9882d465fbf86e1d1a74c0ef9897',1,'Alison rd, Sydney NSW 2031',-33.903574,151.2252754);
+INSERT INTO "locations" VALUES(12,'DrJC''s ballpit emporium','After a university prank gone horribly right, DrJC acquired an interest in helping others turn their homes or offices into a ballpit. For inquiries ring Nicky at 111.','811bc79ee266285deb0afaad7e4245a876b09406',1,'Moore Park, NSW',-33.8958333,151.2219444);
+INSERT INTO "locations" VALUES(13,'Renee and Nicky''s Dance Studio','With 20 years of sick moves between them, Renee and Nicky are ready to teach anyone how to do the nutbush, macarena or any other dance.','e449ba5bd9d33324a368c2989af21c37a375af22',1,'Macquarie University, Australia',-33.7774154,151.1181406);
+INSERT INTO "locations" VALUES(14,'Smerity''s Incognito Assassinations','Through the murder of his own cousin, Smerity has purged his mind of any ethical boundaries, freeing him up to commit any murders necessary.','f0c3d6ed96abd13dca83870e8ae45a858a33d400',1,'Sydney University, NSW',-33.8890431,151.189421365404);
+INSERT INTO "locations" VALUES(15,'Nicky''s Conterfeit Meme Factory','Too poor to afford another rare pepe but still can''t get enough of the spice of true memes? Nicky will create slight modifications on those memes at a low price so that the spice still flows. Includes a built in wrongdoing detector to avoid the long arm of the meme law.','862f94ac54b8484a04cba1ab7ea3b44bd93d0baf',1,'30 Pine Street, Gympie, QLD',-26.181848,152.6503287);
+INSERT INTO "locations" VALUES(16,'QANTAS Airlines','Here at QANTAS, we work as a tightly knit team so that we can help lift all individuals to new heights.','25b5501d75598a052c5486627a0ec7921b8cd50d',1,'Airport Dr, Sydney NSW 2020',-33.9337019,151.1624217);
+INSERT INTO "locations" VALUES(17,'Beats by Dre','Check out our sick new 2k16 beatboxes, with all of the knobs and buttons you love to ensure that the music is just dope enough for your tastes.','d87eaa6b6c78c23629bb13df46ef6a9c0d778a25',1,'Santa Monica, California, United States',34.0195598,-118.4869739);
+INSERT INTO "locations" VALUES(18,'Gio''s Electronics Repair Shop','Wire broke on your sweet headphones? Worry not, Gio is prepared to solder any loose wires and bring them back better than new.','f45ebe545e48ddeae864c4ea97de476ea0b463fd',1,'18081 Chesterfield Airport Road Chesterfield, Missouri',38.66972966716,-90.6382983752486);
+INSERT INTO "locations" VALUES(19,'[Redacted]','We are [Redacted] Legion. [Redacted] forgive. We do [Redacted] us.','1a12d36539a45649fd89f2ad067de0709a1f0469',1,'Iceland',64.9841821,-18.1059013);
+INSERT INTO "locations" VALUES(20,'Tomtom''s Psychiatry','With his years of experience, Tomtom has perfected the response to any problem experienced by anyone.','3754ac45573233107ad0a9634bd7fd02782a62e0',1,'58 Riverwalk Avenue, Robina, QLD',-28.0783076,153.3803969);
+INSERT INTO "locations" VALUES(21,'FBI - X-files department','After seeing the illuminati spread from Simon Pampena to one of the students he was lecturing, the FBI reopened the X-files in an attempt to stamp it out once and for all.','5466690bfa40469255c1a43e3e6c4cf13ab191aa',1,'Pennsylvania Avenue, D.C.',40.1821651,-80.2447893);
+INSERT INTO "locations" VALUES(22,'OPSM','We have a range of glasses to ensure that you appear stylish while still being practical. Come in today for a free frame!','95bd2fbb169b740faaef7a05b0f6b0c4a303cfbe',1,'33/73 Belmore Rd, Randwick NSW 2031',-33.9132728,151.239607);
+INSERT INTO "ratings" VALUES(11,'af',1);
+INSERT INTO "tags" VALUES(1,'curran',1);
+INSERT INTO "tags" VALUES(2,'thomastested',1);
+INSERT INTO "tags" VALUES(3,'compsci',1);
+INSERT INTO "tags" VALUES(4,'curran',2);
+INSERT INTO "tags" VALUES(5,'freelancer',2);
+INSERT INTO "tags" VALUES(6,'compsci',2);
+INSERT INTO "tags" VALUES(7,'tim',3);
+INSERT INTO "tags" VALUES(8,'newsagency',3);
+INSERT INTO "tags" VALUES(9,'blake',4);
+INSERT INTO "tags" VALUES(10,'approval',4);
+INSERT INTO "tags" VALUES(11,'tim',5);
+INSERT INTO "tags" VALUES(12,'octotim',5);
+INSERT INTO "tags" VALUES(13,'compsci',5);
+INSERT INTO "tags" VALUES(14,'callan',6);
+INSERT INTO "tags" VALUES(15,'sam',7);
+INSERT INTO "tags" VALUES(16,'alex',7);
+INSERT INTO "tags" VALUES(17,'blake',7);
+INSERT INTO "tags" VALUES(18,'backstreetsbackalright',7);
+INSERT INTO "tags" VALUES(19,'curran',10);
+INSERT INTO "tags" VALUES(20,'disapproval',10);
+INSERT INTO "tags" VALUES(21,'burnoutparadise',11);
+INSERT INTO "tags" VALUES(22,'arduino',11);
+INSERT INTO "tags" VALUES(23,'compsci',11);
+INSERT INTO "tags" VALUES(24,'curran',12);
+INSERT INTO "tags" VALUES(25,'ballpit',12);
+INSERT INTO "tags" VALUES(26,'renee',13);
+INSERT INTO "tags" VALUES(27,'nicky',13);
+INSERT INTO "tags" VALUES(28,'dance',13);
+INSERT INTO "tags" VALUES(29,'smerity',14);
+INSERT INTO "tags" VALUES(30,'murder',14);
+INSERT INTO "tags" VALUES(31,'oohlookatthat',14);
+INSERT INTO "tags" VALUES(32,'nicky',15);
+INSERT INTO "tags" VALUES(33,'wrongdoing',15);
+INSERT INTO "tags" VALUES(34,'tim',16);
+INSERT INTO "tags" VALUES(35,'flight',16);
+INSERT INTO "tags" VALUES(36,'peter',17);
+INSERT INTO "tags" VALUES(37,'boombox',17);
+INSERT INTO "tags" VALUES(38,'gio',18);
+INSERT INTO "tags" VALUES(39,'solder',18);
+INSERT INTO "tags" VALUES(40,'anon',19);
+INSERT INTO "tags" VALUES(41,'sofa',19);
+INSERT INTO "tags" VALUES(42,'thomas',20);
+INSERT INTO "tags" VALUES(43,'dealwithit',20);
+INSERT INTO "tags" VALUES(44,'sunglasses',20);
+INSERT INTO "tags" VALUES(45,'abby',21);
+INSERT INTO "tags" VALUES(46,'illuminati',21);
+INSERT INTO "tags" VALUES(47,'tim',22);
+INSERT INTO "tags" VALUES(48,'sunglasses',22);
+INSERT INTO "tags" VALUES(49,'eyebrows',22);
+INSERT INTO "users" VALUES(1,'memelord','12345678',NULL,'nice@me.me','Alex','Hogue');
