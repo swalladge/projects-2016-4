@@ -260,6 +260,14 @@ def location_editor(response, id):
         context['error'] = 'Place does not exist'
         render_page('edit_location.html', response, context)
         return
+
+    try:
+        lat = float(response.get_field('lat'))
+        lon = float(response.get_field('long'))
+    except ValueError:
+        context['error'] = 'Invalid latitude or longitude'
+        render_page('create_location.html', response, context)
+        return
     name = response.get_field('name')
     if orig_name != name:
         if Location.find_name(name):
@@ -269,7 +277,7 @@ def location_editor(response, id):
 
     description = response.get_field('description')
     address = response.get_field('address')
-    Location.change_location(id, name, description, location.picture, address, location.latitude, location.longitude)
+    Location.change_location(id, name, description, location.picture, address, lat, lon)
     response.redirect('/location/' + id)
 
 
